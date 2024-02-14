@@ -5,10 +5,17 @@ const Budget = () => {
     const { dispatch, budget } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
     const handleBudgetChange = (event) => {
-        setNewBudget(event.target.value);
+        let pendingBudget = event.target.value;
+        if (pendingBudget > 20000) {
+            alert("Budget cannot exceed 20000");
+            setNewBudget(budget);
+            return;
+        }
+
+        setNewBudget(pendingBudget);
         dispatch({
             type: 'SET_BUDGET',
-            payload: event.target.value,
+            payload: pendingBudget,
         });
     };
     
