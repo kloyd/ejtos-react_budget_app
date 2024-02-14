@@ -13,7 +13,7 @@ const AllocationForm = (props) => {
         if (!Number(cost)) {
             alert("Cost must be a number.");
             setCost("");
-            return;
+            return; 
         }
 
         if(cost > remaining) {
