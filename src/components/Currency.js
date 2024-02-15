@@ -6,7 +6,7 @@ const Currency = () => {
     
     return (
         <div className='col-sm'>
-            <select className="form-control" id="inputCurrency" onChange={(event) => setNewCurrency(event.target.value)}>
+            <select className="form-control bg-success" id="inputCurrency" onChange={(event) => setNewCurrency(event.target.value)}>
             <option defaultValue>Currency ({currency})</option>
                 <option value="dollar" name="dollar">$ Dollar</option>
                 <option value="pound" name="pound">£ Pound</option>
